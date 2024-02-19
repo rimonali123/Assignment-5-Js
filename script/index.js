@@ -19,6 +19,7 @@ const totalPrice = parseFloat(
     document.getElementById('total-price').innerText
 );
 // console.log(totalPrice)
+// price section here
 for (const seat of seats) {
     seat.addEventListener('click', function () {
         const title = seat.innerText;
@@ -71,7 +72,7 @@ for (const seat of seats) {
 // -----------------------------------------------------------
 
 
-// coupon section
+// coupon section here
 function applyCoupon() {
     const totalPrice = parseFloat(
         document.getElementById('total-price').innerText
@@ -89,13 +90,15 @@ function applyCoupon() {
 
     // --------------------------------------
     // coupon condition here
-    if (inputField.value === 'NEW15') {
+    if ( inputField.value === 'NEW15') {
         let discount = totalPrice * 0.15;
         // console.log(discount)
         let total = totalPrice - discount;
         grandTotal.innerText = total;
         discountPrice.innerText = discount;
         applyButton.classList.add('hidden');
+        discountContainer.classList.remove('hidden');
+
     }
     else if (inputField.value === 'Couple 20') {
         let discount = totalPrice * 0.20;
@@ -104,16 +107,11 @@ function applyCoupon() {
         grandTotal.innerText = total;
         discountPrice.innerText = discount;
         applyButton.classList.add('hidden');
+        discountContainer.classList.remove('hidden');
     }
     else {
         alert('Enter valid Coupon Code !!!!')
     }
-    // const discountPrice = totalPrice - grandTotal;
-    // // console.log(discountPrice)
-    // const p = document.createElement('p');
-    // p.innerText = 'Discount Amount';
-    // discountAmount.appendChild(p);
-    // const p2 = document.createElement('p');
-    // p2.innerText = discountPrice;
-    // discountAmount.appendChild(p2);
 }
+
+// modal section
