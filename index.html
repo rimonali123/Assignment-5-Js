@@ -69,10 +69,12 @@
                 <div class="hero-overlay bg-opacity-0"></div>
                 <div class="hero-content text-center text-neutral-content">
                     <div class="">
-                        <h1 class="mb-5 text-3xl lg:text-6xl font-bold font-raleway">End-to-End Travel with <br><span class="text-[#1DD100]">Rk Paribahan</span></h1>
+                        <h1 class="mb-5 text-3xl lg:text-6xl font-bold font-raleway">End-to-End Travel with <br><span
+                                class="text-[#1DD100]">Rk Paribahan</span></h1>
                         <p class="mb-5 lg:w-[600px] mx-auto font-inter"> Hurray ! Enjoy with us a long
                             tour. We provide a enjoyable journey special for you . Buy ticket first. Thank You.</p>
-                        <button onclick="buyTicket()" class="btn btn-primary bg-[#1DD100] text-black text-xl font-bold font-raleway">Buy
+                        <button onclick="buyTicket()"
+                            class="btn btn-primary bg-[#1DD100] text-black text-xl font-bold font-raleway">Buy
                             Tickets</button>
                     </div>
                     <div>
@@ -144,7 +146,8 @@
             </div>
         </section>
         <!-- main paribahan section -->
-        <section id="paribahan" class="mt-28 pb-20 bg-[#F7F8F8] lg:w-[1300px] mx-auto border-t-2 border-green-500 rounded-t-3xl ]">
+        <section id="paribahan"
+            class="mt-28 pb-20 bg-[#F7F8F8] lg:w-[1300px] mx-auto border-t-2 border-green-500 rounded-t-3xl ]">
             <!-- title container -->
             <div class="text-center space-y-5 mt-10 mb-10">
                 <h1 class="text-[#030712] text-4xl font-bold font-raleway">R.K Paribahan</h1>
@@ -159,13 +162,15 @@
                             <div class="flex gap-4 ">
                                 <span><img src="images/bus-logo.png" alt=""></span>
                                 <div>
-                                    <h3 class="text-[#030712] text-xl lg:text-3xl font-bold font-raleway">Greenline Paribahan</h3>
+                                    <h3 class="text-[#030712] text-xl lg:text-3xl font-bold font-raleway">Greenline
+                                        Paribahan</h3>
                                     <p class="text-[#03071299] lg:text-xl font-inter">Coach-009-WEB ! AC_Business</p>
                                 </div>
                             </div>
                             <button class="btn  bg-[#1DD10026] rounded-xl">
                                 <span><img src="images/seat-green.png" alt=""></span>
-                                <p class="text-xl text-green-500 font-bold font-inter"><span id="seatLeft">40</span> Seats left</p>
+                                <p class="text-xl text-green-500 font-bold font-inter"><span id="seatLeft">40</span>
+                                    Seats left</p>
                             </button>
                         </div>
                         <!-- greenLine Bus Section close here -->
@@ -251,8 +256,11 @@
                             <div class="flex gap-4 lg:gap-5 items-center">
                                 <span class="text-xl">A</span>
                                 <div class="flex gap-4 lg:gap-5">
-                                    <button class="btn text-xl bg-[#0307121A] h-10 w-20 lg:w-28 rounded-xl seat"><h2>A1</h2></button>
-                                    <button class="btn text-xl bg-[#0307121A] h-10 w-20 lg:w-28 rounded-xl seat">A2</button>
+                                    <button class="btn text-xl bg-[#0307121A] h-10 w-20 lg:w-28 rounded-xl seat">
+                                        <h2>A1</h2>
+                                    </button>
+                                    <button
+                                        class="btn text-xl bg-[#0307121A] h-10 w-20 lg:w-28 rounded-xl seat">A2</button>
                                 </div>
                             </div>
                             <div class="flex gap-4 lg:gap-5">
@@ -396,7 +404,7 @@
                     <br>
                     <hr class="border-dashed">
                     <br>
-                    <div class="bg-[#F7F8F8] rounded-xl lg:p-8">
+                    <div class="bg-[#F7F8F8] rounded-xl pb-5 lg:p-8">
                         <div class="flex gap-[90px]  lg:gap-[90px] text-xl text-[#030712] font-medium font-inter">
                             <p>Seat <span id="seat-count">0</span></p>
                             <p>Class</p>
@@ -406,24 +414,31 @@
                         <hr class="border-dashed">
                         <br>
                         <div id="title-container" class=" text-xl text-[#03071299] font-inter">
-                            
+
                         </div>
                         <br>
                         <hr>
                         <br>
-                        <div class="flex justify-between text-xl text-[#030712] font-medium font-inter">
+                        <div class="flex justify-between text-xl text-[#030712] pb-5 font-medium font-inter">
                             <p>Total Price</p>
                             <p>BDT <span id="total-price">0</span></p>
                         </div>
+                        <div id="discount-container"
+                            class="">
+                            <div class=" flex justify-between text-xl text-[#030712] font-medium font-inter pb-5">
+                                <p>Discount Price</p>
+                                <p>BDT <span id="discount-price">0</span></p>
+                            </div>
+                        </div>
                         <div class="rounded-xl h-14 p-5 bg-white flex justify-between items-center ">
-                            <input type="text" placeholder="Have any coupon?">
-                            <button
-                                class="bnt text-white bg-[#1DD100] text-xl font-bold font-inter h-10 w-28 rounded-lg">Apply</button>
+                            <input id="input-field" type="text" placeholder="Have any coupon?">
+                            <button onclick="applyCoupon()" id="apply-btn"
+                                class="apply-button bnt text-white bg-[#1DD100] text-xl font-bold font-inter h-10 w-28 rounded-lg">Apply</button>
                         </div>
                         <br>
                         <div class="flex justify-between text-xl text-[#030712] font-medium font-inter">
                             <p>Grand Total</p>
-                            <p>BDT 1100</p>
+                            <p>BDT <span id="grand-total">0</span></p>
                         </div>
                     </div>
                     <!-- input field section -->
@@ -431,22 +446,22 @@
                         <div>
                             <h3 class="text-xl text-[#030712] font-bold font-inter">Passenger Name*</h3>
                             <br>
-                            <input class="border-2 p-6 border-[#0307121A] rounded-xl h-16 w-full lg:w-96"
-                                type="text" placeholder="Enter your name">
+                            <input class="border-2 p-6 border-[#0307121A] rounded-xl h-16 w-full lg:w-96" type="text"
+                                placeholder="Enter your name">
                         </div>
                         <br>
                         <div>
                             <h3 class="text-xl text-[#030712] font-bold font-inter">Phone Number*</h3>
                             <br>
-                            <input class="border-2 p-6 border-[#0307121A] rounded-xl h-16 w-full lg:w-96"
-                                type="number" placeholder="Enter your phone number">
+                            <input class="border-2 p-6 border-[#0307121A] rounded-xl h-16 w-full lg:w-96" type="number"
+                                placeholder="Enter your phone number">
                         </div>
                         <br>
                         <div>
                             <h3 class="text-xl text-[#030712] font-bold font-inter">Email ID</h3>
                             <br>
-                            <input class="border-2 p-6 border-[#0307121A] rounded-xl h-16 w-full lg:w-96"
-                                type="email" placeholder="Enter your email id">
+                            <input class="border-2 p-6 border-[#0307121A] rounded-xl h-16 w-full lg:w-96" type="email"
+                                placeholder="Enter your email id">
                         </div>
                         <br>
                         <div>
@@ -467,7 +482,8 @@
         <div class="flex flex-col lg:flex-row gap-9 lg:gap-96">
             <aside class="space-y-5">
                 <h1 class="text-4xl text-white font-extrabold font-raleway">RK-Ticket</h1>
-                <p class="text-xl text-[#ebebebcc] font-inter">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                <p class="text-xl text-[#ebebebcc] font-inter">P-Ticket is a digital platform to make your <br> daily
+                    commuting better.</p>
             </aside>
             <nav class="">
                 <h6 class="footer-title">Download our app</h6>

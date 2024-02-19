@@ -10,7 +10,7 @@ let seatCount = 0;
 let seatLeft = 40;
 const perTicketPrice = 550;
 let Price = 0;
-let PriceTotal = perTicketPrice + Price;
+let priceTotal = perTicketPrice + Price;
 const seats = document.getElementsByClassName('seat');
 // console.log(seats)
 const seatShow = document.getElementById('seat-count');
@@ -41,7 +41,7 @@ for (const seat of seats) {
         div.style.columnGap = '100px';
         // price section
         const totalPrice = document.getElementById('total-price');
-        console.log('the price is ', totalPrice)
+        // console.log(totalPrice)
 
         if (seatCount < 4 || seat.classList.contains('bg-[#1DD100]')) {
             if (!seat.classList.contains('bg-[#1DD100]')) {
@@ -60,11 +60,60 @@ for (const seat of seats) {
 
         }
         // calculate price here
-        totalPrice.innerText = PriceTotal;
-        PriceTotal += perTicketPrice;
+        totalPrice.innerText = priceTotal;
+        priceTotal += perTicketPrice;
 
 
 
 
     })
+}
+// -----------------------------------------------------------
+
+
+// coupon section
+function applyCoupon() {
+    const totalPrice = parseFloat(
+        document.getElementById('total-price').innerText
+    );
+    const inputField = document.getElementById('input-field');
+    // console.log(inputField.value)
+    const applyButton = document.getElementById('apply-btn');
+    // console.log(applyButton)
+    const grandTotal = document.getElementById('grand-total');
+    // console.log('the grand' ,grandTotal)
+    const discountContainer = document.getElementById('discount-container');
+    const discountPrice = document.getElementById('discount-price');
+    // --------------------------------------
+
+
+    // --------------------------------------
+    // coupon condition here
+    if (inputField.value === 'NEW15') {
+        let discount = totalPrice * 0.15;
+        // console.log(discount)
+        let total = totalPrice - discount;
+        grandTotal.innerText = total;
+        discountPrice.innerText = discount;
+        applyButton.classList.add('hidden');
+    }
+    else if (inputField.value === 'Couple 20') {
+        let discount = totalPrice * 0.20;
+        // console.log(discount)
+        let total = totalPrice - discount;
+        grandTotal.innerText = total;
+        discountPrice.innerText = discount;
+        applyButton.classList.add('hidden');
+    }
+    else {
+        alert('Enter valid Coupon Code !!!!')
+    }
+    // const discountPrice = totalPrice - grandTotal;
+    // // console.log(discountPrice)
+    // const p = document.createElement('p');
+    // p.innerText = 'Discount Amount';
+    // discountAmount.appendChild(p);
+    // const p2 = document.createElement('p');
+    // p2.innerText = discountPrice;
+    // discountAmount.appendChild(p2);
 }
