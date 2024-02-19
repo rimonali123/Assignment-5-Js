@@ -113,5 +113,3 @@ function applyCoupon() {
         alert('Enter valid Coupon Code !!!!')
     }
 }
-
-// modal section
